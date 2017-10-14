@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="PROGRAM_SCHEDULED")
@@ -21,9 +23,11 @@ public class ProgramScheduledBean {
 	@Column(name="LOCATION")
 	private String location;
 	
+	@Temporal(TemporalType.DATE)
 	@Column(name="START_DATE")
 	private Date startDate;
 	
+	@Temporal(TemporalType.DATE)
 	@Column(name="END_DATE")
 	private Date endDate;
 	
